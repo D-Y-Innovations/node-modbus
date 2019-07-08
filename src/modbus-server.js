@@ -8,7 +8,7 @@ class ModbusServer extends EventEmitter {
 
     this._coils = this._options.coils || Buffer.alloc(1024)
     this._discrete = this._options.discrete || Buffer.alloc(1024)
-    this._holding = this._options.holding || Buffer.alloc(1024)
+    this._holding = this._options.holding
     this._input = this._options.input || Buffer.alloc(1024)
   }
 

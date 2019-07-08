@@ -45,5 +45,9 @@ module.exports = {
   server: {
     'TCP': ModbusTCPServer,
     'RTU': ModbusRTUServer
+  },
+  response: {
+    Response: require('./tcp-response.js'),
+    ReadHoldingRegistersResponseBody: require('./response/read-holding-registers.js')
   }
 }

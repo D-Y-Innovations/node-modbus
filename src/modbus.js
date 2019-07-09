@@ -48,6 +48,7 @@ module.exports = {
   },
   response: {
     Response: require('./tcp-response.js'),
-    ReadHoldingRegistersResponseBody: require('./response/read-holding-registers.js')
+    ReadHoldingRegistersResponseBody: require('./response/read-holding-registers.js'),
+    ExceptionBody:require('./response/exception')
   }
 }

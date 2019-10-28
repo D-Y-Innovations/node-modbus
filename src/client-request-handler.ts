@@ -45,7 +45,7 @@ export default abstract class MBClientRequestHandler<S extends Stream.Duplex, Re
     }
     this._socket = socket
     this._timeout = timeout
-    this._state = 'offline'
+    this._state = 'online'
   }
 
   public abstract register<R extends Req, B extends ModbusRequestBody> (requestBody: B):

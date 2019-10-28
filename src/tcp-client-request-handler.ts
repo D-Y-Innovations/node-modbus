@@ -37,8 +37,8 @@ export default class ModbusTCPClientRequestHandler extends MBClientRequestHandle
     this._requests = []
     this._currentRequest = null
 
-    this._socket.on('connect', this._onConnect.bind(this))
-    this._socket.on('close', this._onClose.bind(this))
+    // this._socket.on('connect', this._onConnect.bind(this))
+    // this._socket.on('close', this._onClose.bind(this))
   }
 
   // TODO: Find a better way then putting in the any overide

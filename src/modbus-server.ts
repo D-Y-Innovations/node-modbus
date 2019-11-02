@@ -6,14 +6,14 @@ import ModbusServerClient from './modbus-server-client'
 export interface IModbusServerOptions {
   coils: Buffer
   discrete: Buffer
-  holding: Buffer
+  holding: Buffer | undefined
   input: Buffer
 }
 
 const DEFAULT_MODBUS_SERVER_OPTIONS: IModbusServerOptions = {
   coils: Buffer.alloc(1024),
   discrete: Buffer.alloc(1024),
-  holding: Buffer.alloc(1024),
+  holding: undefined,
   input: Buffer.alloc(1024)
 }
 
@@ -60,6 +60,7 @@ export default class ModbusServer extends EventEmitter {
   }
 
   public on (event: 'connection', listener: (socket: Socket) => void): this
+  public on (event: 'readHoldingRegisters', listener: (request: any, cb: BufferCallback) => void): this
   public on (event: string | symbol, listener: (...args: any[]) => void): this {
     return super.on(event, listener)
   }

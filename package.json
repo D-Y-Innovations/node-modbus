@@ -31,7 +31,7 @@
     "sinon": "2.2.0",
     "tslint": "^5.20.0",
     "tslint-config-standard": "^8.0.1",
-    "typescript": "^3.5.2"
+    "typescript": "^3"
   },
   "scripts": {
     "test": "npm run lint && npm run build && mocha test/*.test.js",

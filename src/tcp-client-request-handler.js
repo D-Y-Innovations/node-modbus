@@ -23,8 +23,8 @@ class ModbusTCPClientRequestHandler extends ModbusClientRequestHandler {
     this._requestId = 0
     this._unitId = unitId
 
-    this._socket.on('connect', this._onConnect.bind(this))
-    this._socket.on('close', this._onClose.bind(this))
+    // this._socket.on('connect', this._onConnect.bind(this))
+    // this._socket.on('close', this._onClose.bind(this))
   }
 
   register (requestBody) {

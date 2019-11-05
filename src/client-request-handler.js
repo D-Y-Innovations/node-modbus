@@ -24,7 +24,7 @@ class ModbusClientRequestHandler {
     this._timeout = timeout
     this._requests = []
     this._currentRequest = null
-    this._state = 'offline'
+    this._state = 'online'
   }
 
   _clearCurrentRequest () {

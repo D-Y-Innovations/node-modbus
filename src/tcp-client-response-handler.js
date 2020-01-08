@@ -15,6 +15,8 @@ class ModbusTCPClientResponseHandler extends ModbusClientResponseHandler {
   }
 
   handleData (data) {
+    debug('dy --> clean _buffer')
+    this._buffer = Buffer.alloc(0)
     debug('receiving new data', data)
     this._buffer = Buffer.concat([this._buffer, data])
 

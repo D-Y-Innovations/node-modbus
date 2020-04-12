@@ -17,6 +17,9 @@ export default class ModbusTCPClientResponseHandler extends ModbusClientResponse
   }
 
   public handleData (data: Buffer) {
+    // TODO find out why slice no working sometimes
+    debug('dy --> clean tcp response client _buffer')
+    this._buffer = Buffer.alloc(0)
     debug('receiving new data', data)
     this._buffer = Buffer.concat([this._buffer, data])
 

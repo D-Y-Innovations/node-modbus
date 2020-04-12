@@ -92,7 +92,7 @@ export default class ModbusServer extends EventEmitter {
   public on (event: 'postWriteMultipleRegisters', listener: (holdingRegisters: Buffer) => void): this
   public on (event: 'postWriteMultipleRegisters', listener: (request: AbstractRequest, cb: BufferCB) => void): this
   public on (event: 'connection', listener: (socket: Socket) => void): this
-  public on (event: 'readHoldingRegisters', listener: (request: any, cb: BufferCallback) => void): this
+  public on (event: 'readHoldingRegisters', listener: (request: any, cb: any) => void): this
   public on (event: string | symbol, listener: (...args: any[]) => void): this {
     return super.on(event, listener)
   }
